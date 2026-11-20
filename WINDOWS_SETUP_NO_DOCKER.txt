@@ -1,0 +1,23 @@
+TRANSITWISE — WINDOWS SETUP (NO DOCKER)
+
+1. Start MySQL Server and MongoDB Server from Windows Services (services.msc).
+2. Open MySQL Workbench and execute database/mysql/init.sql to create transit_db.
+3. Copy your .env.local into the project root. Make sure MYSQL_DATABASE=transit_db and the password is correct.
+4. In VS Code PowerShell run:
+   npm install
+   npm run db:check
+   npm run db:seed
+   npm run dev
+5. Open http://localhost:3000
+
+PAGES
+- / : public landing page
+- /login : passenger sign-up and sign-in
+- /routes : passenger route planner (login required)
+- /admin/login : separate administrator login
+- /admin : administrator dashboard (admin role required)
+
+DEMO ADMIN: admin@transitwise.local / Admin@123
+DEMO PASSENGER: passenger@transitwise.local / Passenger@123
+
+No Docker commands are needed. Execute the SQL file in MySQL Workbench, not in PowerShell.

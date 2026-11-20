@@ -1,0 +1,3 @@
+TransitWise project package
+
+Includes Next.js app, MySQL schema + sample data, MongoDB seed/index setup, API routes, auth, route ranking logic, Docker Compose, tests and README setup guide.
